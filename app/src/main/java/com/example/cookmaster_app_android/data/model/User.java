@@ -17,6 +17,12 @@ public class User {
         private Date updated_at;
 
         public User(String nom, String prenom, String adresse, String email, String mot_de_passe, String telephone) {
+                this.nom = nom;
+                this.prenom = prenom;
+                this.adresse = adresse;
+                this.email = email;
+                this.mot_de_passe = mot_de_passe;
+                this.telephone = telephone;
         }
 
         public int getId() {
@@ -35,7 +41,7 @@ public class User {
             return nom;
     }
 
-        public Object getEmail() {
+        public String getEmail() {
                 return email;
         }
 }

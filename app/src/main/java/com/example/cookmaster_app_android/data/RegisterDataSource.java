@@ -1,5 +1,7 @@
 package com.example.cookmaster_app_android.data;
 
+import android.util.Log;
+
 import com.example.cookmaster_app_android.data.api.ApiService;
 import com.example.cookmaster_app_android.data.model.LoggedInUser;
 import com.example.cookmaster_app_android.data.model.User;
@@ -21,6 +23,13 @@ public class RegisterDataSource {
     public Result<LoggedInUser> register(String nom, String prenom, String adresse, String mot_de_passe, String email, String telephone, RegisterCallback callback) {
         // Créez un objet User avec les valeurs saisies par l'utilisateur
         User user = new User(nom, prenom, adresse, email, mot_de_passe, telephone);
+        // Afficher les valeurs des champs dans les logs
+        Log.d("RegisterDataSource", "Nom: " + nom);
+        Log.d("RegisterDataSource", "Prénom: " + prenom);
+        Log.d("RegisterDataSource", "Adresse: " + adresse);
+        Log.d("RegisterDataSource", "Mot de passe: " + mot_de_passe);
+        Log.d("RegisterDataSource", "Email: " + email);
+        Log.d("RegisterDataSource", "Téléphone: " + telephone);
 
         // Appel de la méthode createUser de l'API pour créer un nouvel utilisateur
         Call<Void> call = apiService.createUser(user);

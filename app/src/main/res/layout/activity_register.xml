@@ -8,43 +8,68 @@
     tools:context=".register.RegisterActivity">
 
     <EditText
-        android:id="@+id/etFirstName"
+        android:id="@+id/textViewFirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nom" />
+        android:hint="Nom"
+        android:minHeight="48dp"
+        android:importantForAutofill="yes"
+        android:autofillHints="firstName"
+        android:inputType="textPersonName"
+        />
 
     <EditText
-        android:id="@+id/etLastName"
+        android:id="@+id/textViewLastName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Prénom" />
+        android:hint="Prénom"
+        android:minHeight="48dp"
+        android:importantForAutofill="yes"
+        android:autofillHints="lastname"
+        />
 
     <EditText
-        android:id="@+id/etAddress"
+        android:id="@+id/textViewAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Adresse" />
+        android:hint="Adresse"
+        android:minHeight="48dp"
+        android:importantForAutofill="yes"
+        android:autofillHints="address"
+        />
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/textViewEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:hint="Email" />
+        android:hint="Email"
+        android:minHeight="48dp"
+        android:importantForAutofill="yes"
+        android:autofillHints="email"
+        />
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/textViewPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:hint="Mot de passe" />
+        android:hint="Mot de passe"
+        android:minHeight="48dp"
+        android:importantForAutofill="yes"
+        android:autofillHints="password"
+        />
 
     <EditText
-        android:id="@+id/etPhoneNumber"
+        android:id="@+id/textViewPhoneNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="phone"
-        android:hint="Téléphone" />
+        android:hint="Téléphone"
+        android:minHeight="48dp"
+        android:importantForAutofill="yes"
+        android:autofillHints="phone"
+        />
 
     <Button
         android:id="@+id/btnRegister"
